@@ -1,0 +1,179 @@
+.footer
+  position: relative
+  background:
+    image: url('../images/footerbg.jpg')
+    size: cover
+    position: center
+    // attachment: fixed
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background:
+      image: $footer-bg
+    z-index: 0
+
+  &__row
+    position: relative
+    display: flex
+    flex-flow: row wrap
+
+    &--social
+      text-align: center
+      justify-content: center
+
+      & > h4
+        @include respond(phone-sm)
+          font-size: 2.5rem
+
+    &--lists
+      justify-content: space-between
+
+    &--legal
+      justify-content: center
+      background-color: darken(rgba($color-primary, .6), 10%)
+
+      @include respond(phone)
+        justify-content: flex-start
+
+  &__social
+    list-style: none
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+
+    &--item
+      margin: 1rem .8rem
+
+    &--links
+      display: flex
+      align-items: center
+      justify-content: center
+      width: 6rem
+      height: 6rem
+      color: #fff
+      border-radius: 50%
+      transition: all .2s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    .fb
+      background-color: $color-fb
+
+      &:hover
+        background-color: #fff
+        color: $color-fb
+
+    .twt
+      background-color: $color-twt
+
+      &:hover
+        background-color: #fff
+        color: $color-twt
+
+    .insta
+      position: relative
+      background-color: #fff
+      color: #fff
+
+      &::after
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        border-radius: 50%
+        background: $instagram-bg
+        z-index: 0
+        transition: all .2s cubic-bezier(0.39, 0.575, 0.565, 1)
+      
+      .fa
+        position: relative
+        z-index: 10
+
+      &:hover
+        color: rgba(0, 0, 0, .2)
+
+        &::after
+          opacity: 0
+
+        .fa
+          background: $instagram-bg
+          background-clip: text
+          -webkit-background-clip: text
+
+    .yt
+      background-color: darken($color-secondary, 10%)
+
+      &:hover
+        background-color: #fff
+        color: darken($color-secondary, 10%)
+
+  &__nav
+    padding: 0 1rem
+    margin-bottom: 6rem
+
+    & > h5
+      @include respond(tab-land)
+        font-size: 1.6rem
+
+      @include respond(phone-sm)
+        font-size: 2.5rem
+
+    @include respond(tab-port)
+      width: calc(100% / 3)
+      margin-bottom: 6rem
+      padding: 0 4rem
+
+    @include respond(phone)
+      width: calc(100% / 2)
+
+    @include respond(phone-sm)
+      width: 100%
+      margin-bottom: 4rem
+
+    &--lists
+      list-style: none
+    
+    &--item:not(:last-child)
+      margin-bottom: .5rem
+
+    &--link
+      color: #fff
+      font-size: 1.4rem
+
+      @include respond(phone-sm)
+        font-size: 2rem
+
+      &:hover
+        color: $color-tertiary
+  
+  &__legalLists
+    list-style: none
+    display: flex
+    flex-flow: row wrap
+    padding: 3rem 0
+
+    @include respond(phone)
+      flex-flow: column nowrap
+      padding: 3rem 5rem
+
+    &--item
+      color: #fff
+      font-size: 1.4rem
+
+      &:not(:last-child)
+        margin-right: 6rem
+
+        @include respond(phone)
+          margin-right: 0
+          margin-bottom: 1rem        
+
+    &--link
+      color: #fff
+
+      &:hover
+        color: $color-tertiary

@@ -1,0 +1,391 @@
+.header
+  &__row
+    position: relative
+    max-width: 100%
+    width: 100%
+    margin: 0 auto
+    transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    z-index: 1000
+
+  .rowUnscrolled
+    max-width: calc(100% - 6rem)
+    transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    @include respond(phone-land)
+      max-width: 100%
+      width: 100%
+
+  .mainnavUnscrolled
+    max-width: calc(100% - 6rem)
+    top: 4rem
+    transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    @include respond(phone-land)
+      max-width: 100%
+      width: 100%
+      top: 0
+
+    .logobox
+      height: 10rem
+      transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+      @include respond(phone-land)
+        height: 8rem
+
+    .header__nav--links
+      padding: 4rem 2rem
+      transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+      @include respond(phone-land)
+        padding: 3rem 2rem
+
+    .header__signUp
+      transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+  &__mainnav
+    position: fixed !important
+    max-width: 100%
+    width: 100%
+    padding: 0 1.6rem
+    top: 0
+    background:
+      color: $color-primary
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    z-index: 100
+
+    @include respond(phone-land)
+      justify-content: space-between
+      padding: 0 2.5rem
+    
+    @include respond(phone)
+      padding: 0 1.6rem
+
+    .logobox
+      width: 27rem
+      height: 8rem
+      margin: 0 3rem 0 0
+      transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+      @include respond(tab-port)
+        width: 13rem
+        padding: 1.2rem 1.2rem 1.2rem 0
+
+      .logo
+        fill: #fff
+
+        @include respond(tab-port)
+          display: none
+
+      .logo-sm
+        fill: #fff
+        display: none
+
+        @include respond(tab-port)
+          display: inherit
+
+  &__nav
+    @include respond(phone-land)
+      display: none
+
+    &--lists
+      display: flex
+      list-style: none
+
+    &--item
+      display: flex
+
+      &.active
+        & > .header__nav--links
+          background-color: $color-secondary
+
+          &::before
+            content: ''
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: .4rem
+            background-color: #fff
+            transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    &--links
+      color: #fff
+      font-weight: 600
+      padding: 3rem 2rem
+      position: relative
+      text-transform: uppercase
+      transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+      &::before
+        content: ''
+        position: absolute
+        top: 0
+        left: 0
+        width: 100%
+        height: 0
+        background-color: #fff
+        transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+      &:hover
+        background-color: $color-secondary
+
+        &::before,
+        &::after
+          height: .4rem
+
+  &__signUp
+    margin-left: auto
+    margin-right: 2rem;
+    display: flex
+    align-items: center
+    transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1)
+    color: #fff
+
+    @include respond(phone-land)
+      margin-right: 3rem;
+
+    .fa
+      color: #fff
+
+    &:hover
+      .fa
+        transform: scale(1.1)
+
+        @include respond(phone-land)
+          transform: scale(1)
+
+      .pe
+        transform: scale(1.1)
+
+        @include respond(phone-land)
+          transform: scale(1)
+
+  &__form
+    display: flex
+    align-items: center
+
+    @include respond(phone-land)
+      display: none
+
+    &--group
+      position: absolute
+      display: flex
+      opacity: 0
+      visibility: hidden
+      width: 70rem
+      right: 0
+      top: 105%
+      transform: translateY(2rem)
+      transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    .isActiveSrch
+      // display: flex
+      opacity: 1
+      visibility: visible
+      transform: translateY(0rem)
+
+    &--srch
+      color: #fff
+      padding: 2.5rem 
+      width: 90%
+      background-color: $color-primary
+      font:
+        family: cwc
+        size: 3rem
+        weight: 400
+      
+      &:focus
+        outline: none
+      
+      &::placeholder
+        color: rgba(#fff, .5)
+    
+    &--btn-submit
+      // padding: 0 4rem
+      width: 10%
+      background-color: $color-primary
+      cursor: pointer
+      transition: all .2s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+      .pe 
+        color: #fff
+        transition: all .2s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+      &:hover
+        .pe 
+          color: $color-secondary
+          transform: scale(1.2)
+
+      &:focus
+        outline: none
+
+    &--btn-srch
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 4rem
+      width: 4rem
+      border-radius: 50%
+      background-color: transparent
+      cursor: pointer
+      // transition: all .5s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+      &:hover
+        transform: scale(1.1)
+
+      &:focus
+        outline: none
+
+      .pe
+        font-size: 4rem
+        color: #fff
+
+    .cls
+      background-color: $color-secondary
+
+  &__navTogglerBtn
+    background-color: transparent
+    width: 4rem
+    height: 4rem
+    position: relative
+    display: none
+    align-items: center
+    justify-content: flex-end
+    cursor: pointer
+    transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    @include respond(phone-land)
+      display: flex
+
+    &:focus
+      outline: none
+
+    &--bars
+      width: 80%
+      height: .3rem
+      border-radius: 1rem
+      background-color: #fff
+      transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+      &::before
+        content: ''
+        position: absolute
+        right: 0
+        width: 100%
+        height: .3rem
+        background-color: #fff
+        transform: translateY(-.9rem)
+        border-radius: 1rem
+        transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+      &::after
+        content: ''
+        position: absolute
+        right: 0
+        width: 60%
+        height: .3rem
+        background-color: #fff
+        transform: translateY(.9rem)
+        border-radius: 1rem
+        transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    .cross
+      background-color: transparent
+
+      &::before
+        content: ''
+        width: 100%
+        background-color: #fff
+        transform: translateY(0) rotate(-45deg)
+
+      &::after
+        content: ''
+        width: 100%
+        background-color: #fff
+        transform: translateY(0) rotate(45deg)
+
+  .rotateNav
+    transform: rotate(180deg)
+
+  &__mobileNavbar
+    position: fixed
+    top: 8rem
+    bottom: 0
+    right: 0
+    left: 0
+    // opacity: 0
+    visibility: hidden
+    transform: translateY(100vh)
+    width: 100%
+    display: none
+    flex-flow: column nowrap
+    background-color: $color-primary
+    transition: all .4s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    @include respond(phone-land)
+      display: flex
+
+  &__mobileForm
+    width: 100%
+
+    &--group
+      display: flex
+
+    &--srch
+      width: 100%
+      padding: 2rem 2.5rem
+      color: #fff
+      background-color: darken($color-primary, 5%)
+      font:
+        family: cwc
+        size: 2rem
+        weight: 400
+
+      &:focus
+        outline: none
+
+      &::placeholder
+        color: rgba(#fff, .5)
+
+    &--btn-submit
+      width: 8rem
+      background-color: darken($color-primary, 5%)
+      color: rgba(#fff, .5)
+      cursor: pointer
+
+      &:focus
+        outline: none
+
+  &__mobileNav
+    overflow-y: auto
+
+    &::-webkit-scrollbar
+      width: .5rem
+
+    &::-webkit-scrollbar-track
+      background-color: $color-primary
+
+    &::-webkit-scrollbar-thumb
+      background-color: $color-secondary
+      border-radius: 2rem
+
+    &--lists
+      list-style: none
+    
+    &--item
+      border-bottom: .1rem solid rgba($color-gray, .3)
+    
+    &--links
+      display: block
+      color: #fff
+      padding: 2rem 2.5rem
+      text-transform: uppercase
+      font-weight: 600
+
+  .navOpen
+    // opacity: 1
+    visibility: visible
+    transform: translateY(0)

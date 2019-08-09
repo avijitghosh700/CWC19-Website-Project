@@ -1,0 +1,65 @@
+$sizes: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10
+
+// Margin and Padding (x & y)
+@each $size in $sizes
+  .mx-#{$size}
+    margin-right: $size + rem
+    margin-left: $size + rem
+
+@each $size in $sizes
+  .px-#{$size}
+    padding-right: $size + rem
+    padding-left: $size + rem
+
+@each $size in $sizes
+  .my-#{$size}
+    margin-top: $size + rem
+    margin-bottom: $size + rem
+
+@each $size in $sizes
+  .py-#{$size}
+    padding-top: $size + rem
+    padding-bottom: $size + rem
+
+//Margin
+@each $size in $sizes
+  .mt-#{$size}
+    margin-top: $size + rem
+
+@each $size in $sizes
+  .mr-#{$size}
+    margin-right: $size + rem
+
+@each $size in $sizes
+  .mb-#{$size}
+    margin-bottom: $size + rem
+
+@each $size in $sizes
+  .ml-#{$size}
+    margin-left: $size + rem
+
+//Padding
+@each $size in $sizes
+  .pt-#{$size}
+    padding-top: $size + rem
+
+@each $size in $sizes
+  .pr-#{$size}
+    padding-right: $size + rem
+
+@each $size in $sizes
+  .pb-#{$size}
+    padding-bottom: $size + rem
+
+@each $size in $sizes
+  .pl-#{$size}
+    padding-left: $size + rem
+
+.w-100
+  width: 100%
+
+.h-100
+  height: 100%
+
+.border
+  border-bottom: .1rem solid rgba($color-gray, .5)

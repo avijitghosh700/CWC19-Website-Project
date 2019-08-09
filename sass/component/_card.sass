@@ -1,0 +1,824 @@
+.cardLink
+  display: inline-block
+  width: 100%
+
+  &:focus
+    outline: none
+  
+  &:hover
+    .card1
+      box-shadow: 0 0 1.2rem rgba($color-gray, .5)
+
+    .card4
+      &__team--name
+        color: $color-tertiary
+        // text-decoration: underline
+
+      &__team--score
+        span:nth-child(1)
+          color: $color-tertiary
+          // text-decoration: underline
+
+    .card5
+      &__arrowIcon
+        transform: translateX(.6rem)
+
+.card
+  display: flex
+  flex-wrap: wrap
+  position: relative
+
+.card1
+  width: 100%
+  // border: 1px solid $color-gray
+  padding: 0 1.6rem
+  box-shadow: 0 0 .2rem rgba($color-gray, 1)
+  transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+  &__datetime
+    display: flex
+    width: 100%
+    flex-wrap: wrap
+    padding: 1.6rem 0
+    justify-content: space-between
+    position: relative
+    // border-bottom: 1px solid $color-gray
+
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: .2rem
+      box-shadow: 0 .1rem 0 rgba($color-gray, .5)
+      // background-color: rgba($color-gray, .5)
+
+    &--date
+      font:
+        size: 2rem
+    
+    &--gmt
+      span:first-child
+        font:
+          size: 2rem
+  
+  &__versus
+    display: flex
+    width: 100%
+    justify-content: flex-start
+    padding: 1.6rem 0
+
+    @include respond(phone-land)
+      padding: 2.6rem 0
+
+    &--imgCont
+      width: 7rem
+      height: 4rem
+      position: relative
+      align-self: center
+      
+    &--img
+      width: 64%
+      position: absolute
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+      box-shadow: .5rem .6rem 1rem rgba(#000, .2)
+
+      &:first-child
+        top: 0
+        left: 0
+        z-index: 10
+      
+      &:last-child
+        right: 0
+        bottom: 0
+    
+    &--rivalsInfo
+      display: flex
+      flex-direction: column
+      justify-content: center
+
+.card2
+  width: 100%
+  height: 29rem
+  flex-wrap: nowrap
+  background-color: #fff
+  overflow: hidden
+
+  &::after
+    content: ''
+    position: absolute
+    top: -11%
+    right: -26%
+    transform: rotate(-45deg)
+    border-top-left-radius: 20rem
+    border-bottom-left-radius: 20rem
+    height: 20rem
+    width: 34rem
+    background-color: $color-yellow
+
+    @include respond(tab-land)
+      top: -14%;
+      right: -50%
+    
+    @include respond(tab-port)
+      top: -10%
+      right: -13%
+      height: 25rem
+      width: 36rem
+
+    @include respond(phone-land)
+      top: -10%
+      right: -10%
+    
+    @include respond(phone-sm)
+      top: -12%
+      right: -15%
+
+  &__info
+    padding: 1.6rem 0 1.6rem 1.8rem
+    width: 30rem
+    display: flex
+    flex-flow: column wrap
+    justify-content: space-between
+    z-index: 100
+
+    &--title
+      & > h2
+        @include respond(tab-port)
+          font-size: 3rem
+
+    &--name
+      .nameLink
+        span:first-child
+          @include respond(tab-port)
+            font-size: 2rem
+        
+        span:last-child
+          @include respond(tab-port)
+            font-size: 2.5rem
+
+        &:hover
+          span
+            color: $color-green
+
+    &--country
+      display: flex
+      flex-flow: row wrap
+      align-items: flex-end
+    
+  &__flag
+    width: 5rem
+    height: 5rem
+    border-radius: 50%
+    text-align: center
+
+    img
+      width: 100%
+      height: 100%
+      border-radius: 50%
+  
+  &__playerImg
+    width: calc(100% - 3rem)
+    display: flex
+    justify-content: flex-end
+    align-items: flex-end
+    z-index: 10
+
+    @include respond(tab-port)
+      width: calc(100% - 27rem)
+
+    &--img
+      width: 28rem
+      height: 28rem
+
+.card3
+  width: 100%
+  background-color: #fff
+  border: .1rem solid rgba($color-gray, .5)
+  box-shadow: 0 0 .5rem rgba($color-gray, .4)
+
+  &__header
+    width: 100%
+    display: flex
+    justify-content: space-between
+    padding: 1.2rem 0
+    // background-color: $color-tertiary
+  
+  &__topper
+    width: 100%
+    height: 28rem
+    position: relative
+    overflow: hidden
+
+    &--img
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 40rem
+      object-fit: cover
+    
+    [alt="sachin"]
+      height: 34rem
+    
+    [alt="martin"]
+      height: 35rem
+
+    &--caption
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-image: linear-gradient(to bottom, rgba($color-tertiary, 1), rgba($color-tertiary, .2), transparent)
+      padding: 0 1.2rem 1.2rem 1.2rem
+
+  &__country
+    display: flex
+    flex-wrap: nowrap
+    align-items: flex-end
+
+    &--flag
+      width: 4rem
+      height: 4rem
+      border-radius: 50%
+      margin-right: .5rem
+
+      img
+        width: 100%
+        height: 100%
+        border-radius: 50%
+  
+  &__tableCont
+    width: 100%
+    padding: .5rem 1.2rem
+    border-bottom: .1rem solid rgba($color-gray, .5)
+  
+  &__table
+    width: 100%
+
+    .player
+      width: 100%
+
+      td
+        padding: .5rem 0
+      
+      &__nation
+        padding: auto 1.6rem
+        display: flex
+        align-items: center
+
+        &--flag
+          width: 3rem
+          height: 3rem
+          border-radius: 50%
+
+          img
+            width: 100%
+            height: 100%
+            border-radius: 50%
+      
+      &__score
+        text-align: right
+  
+  &__link
+    width: 100%
+
+    &--link
+      display: block
+      width: 100%
+      padding: 1.6rem
+      text-align: center
+      transition: all .2s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+      &:hover
+        background-color: $color-tertiary
+        color: #fff
+
+.card4
+  flex-flow: column nowrap
+  border-top-right-radius: 2rem
+  border-top-left-radius: .5rem
+  border-bottom-left-radius: 2rem
+  border-bottom-right-radius: .5rem
+  box-shadow: 0 .1rem 1rem rgba($color-gray, .5)
+
+  &:not(:last-child)
+    margin-bottom: 3rem
+
+  &__header
+    padding: .5rem
+    border-top-right-radius: 2rem
+    border-top-left-radius: .5rem
+    background-color: $color-tertiary
+    text-align: center
+
+  &__header-semifinal
+    @extend .card4__header
+    background:
+      image: $semi-final-gradient
+
+  &__header-final
+    @extend .card4__header
+    background:
+      image: $final-gradient
+
+  &__innerCont
+    width: 100%
+    display: flex
+    // align-items: center
+    align-self: center
+
+    @include respond(phone)
+      flex-flow: column nowrap
+
+  &__body
+    display: flex
+    justify-content: space-between
+
+    @include respond(phone)
+      flex-flow: column nowrap
+
+    &--sec-1
+      display: flex
+      align-items: stretch
+      width: 70%
+
+      @include respond(phone)
+        width: 100%
+
+      .cardLink
+        display: flex
+        padding: 2rem
+
+        @include respond(phone)
+          padding: 1rem
+
+    &--sec-2
+      width: 30%
+      position: relative
+
+      @include respond(phone)
+        width: 100%
+        padding: 1rem
+
+      .figLink
+        padding: 2rem
+
+        @include respond(phone)
+          padding: 0
+
+      &::before
+        content: ''
+        position: absolute
+        top: 50%
+        left: 0
+        transform: translateY(-50%)
+        height: 80%
+        width: .2rem
+        box-shadow: -.1rem 0 .1rem rgba($color-gray, .5)
+        // background-color: rgba($color-gray, .6)
+
+        @include respond(phone)
+          display: none
+
+    .semifinal-sec-2,
+    .final-sec-2
+      @include respond(phone)
+        width: 100%
+        padding: 0
+
+    &--matchTiming
+      width: 40%
+      padding-right: 1rem
+
+      @include respond(phone)
+        display: flex
+        padding: 0 0 1rem 0
+        border-bottom: .1rem solid rgba($color-gray, .5)
+        justify-content: space-between
+        width: 100%
+
+      .date
+        margin-bottom: .6rem
+
+        @include respond(phone)
+          margin-bottom: 0
+
+      .time
+        margin-bottom: 1.6rem
+
+        @include respond(phone)
+          margin-bottom: 0
+
+        span
+          @include respond(tab-port)
+            display: block
+
+          @include respond(phone)
+            display: inline
+
+    &--matchStatus
+      width: 60%
+
+      @include respond(phone)
+        padding: 2rem 0 0 0
+
+      @include respond(phone)
+        width: 100%
+
+  &__team
+    display: flex
+
+    &--desk
+      flex-flow: column nowrap
+
+      @include respond(phone)
+        display: none
+
+    &--mobile
+      display: none
+
+      @include respond(phone)
+        display: flex
+        align-items: center
+
+    &--Team
+      display: flex
+      align-items: center
+
+      &:first-child
+        margin-bottom: 1.6rem
+
+    &--img
+      width: 4rem
+      height: 4rem
+      flex: none
+      border-radius: 5rem
+      margin-right: 1rem
+      box-shadow: .2rem .2rem 1.2rem rgba($color-gray, .8)
+
+      @include respond(phone)
+        margin-right: 0
+
+      img
+        width: 100%
+        height: 100%
+        border-radius: 5rem
+
+    .team-semifinal
+      display: flex
+      align-items: center
+      justify-content: center
+      background-image: $semi-final-gradient
+
+      &:nth-child(1)
+
+      &__logo
+        width: 2rem
+        height: 2rem
+        fill: #fff
+
+    .team-final
+      display: flex
+      align-items: center
+      justify-content: center
+      background-image: $final-gradient
+
+      &__logo
+        width: 2rem
+        height: 2rem
+        fill: #fff
+
+    // &--name
+
+    &--score
+      margin-left: auto
+      text-align: right
+
+      span
+        @include respond(tab-land)
+          display: block
+
+        @include respond(phone)
+          display: inline
+
+        // @include respond(phone-xsm)
+        //   display: block
+
+  &__teamMobile
+    &--teamCont
+      width: 100%
+      padding-left: 1rem
+      display: flex
+      flex-flow: column nowrap
+
+    &--img
+      position: relative
+      height: 4rem
+      width: 7.5rem
+
+      & > *
+        position: absolute
+        top: 0
+        width: 4rem
+        height: 4rem
+        border-radius: 5rem
+        box-shadow: .2rem .2rem 1rem rgba(#000, .2)
+
+      & > *:nth-child(1)
+        left: 0
+        z-index: 10
+
+      & > *:nth-child(2)
+        right: 0
+        z-index: 1
+
+    &--Team
+      width: 100%
+      display: flex
+      justify-content: space-between
+      align-items: center
+
+      &:nth-child(1)
+        margin-bottom: 1rem
+
+  &__body-MatchCont
+    display: flex
+    flex-flow: column nowrap
+    height: 100%
+    border-bottom-right-radius: .5rem
+
+    @include respond(phone)
+      flex-flow: row nowrap
+      border-top: .1rem solid rgba($color-gray, .5)
+      border-bottom-left-radius: 2rem
+
+  &__body-Ticket
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 50%
+    padding: 2rem
+    border-bottom: .1rem solid rgba($color-gray, .5)
+    transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    & > .fa
+      margin-right: .5rem
+
+    @include respond(phone)
+      width: 50%
+      border-bottom: 0
+      border-bottom-left-radius: 2rem
+      border-right: .1rem solid rgba($color-gray, .5)
+
+  .semifinal
+    &__link
+      &:hover
+        color: #fff
+        background-color: darken($color-blue-light, 5%)
+
+  .final
+    &__link
+      &:hover
+        color: #fff
+        background-color: darken($color-yellow, 5%)
+
+  &__body-MatchCenter
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 50%
+    padding: 2rem
+    transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+    border-bottom-right-radius: .5rem
+
+    @include respond(phone)
+      width: 50%
+
+    &--logo
+      fill: $color-secondary
+      width: 2rem
+      height: 2rem
+      margin-right: .5rem
+      transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    &:hover
+      color: #fff
+      background-color: $color-secondary
+
+      .card4__body-MatchCenter--logo
+        fill: #fff
+
+.card5
+  border-radius: 10rem
+  box-shadow: 0 0 1rem rgba($color-gray, .5)
+  transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+  & > .cardLink
+    padding: .5rem
+
+  @include respond(tab-port)
+    border-radius: 1rem
+
+  &__innerWrapper
+    display: flex
+
+    @include respond(tab-port)
+      flex-flow: column nowrap
+
+  &__team
+    display: flex
+    align-items: center
+    width: 34rem
+    padding: 2rem
+    border-radius: 10rem
+    transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    @include respond(tab-port)
+      border-radius: 1rem
+      width: 100%
+
+    & > span:nth-child(2)
+      @include respond(phone-sm)
+        display: none
+
+    & > span:nth-child(3)
+      display: none
+
+      @include respond(phone-sm)
+        display: block
+
+    &--img
+      width: 5rem
+      height: 5rem
+      border-radius: 5rem
+      margin-right: 1rem
+      box-shadow: .3rem .3rem 1rem rgba(#000, .3)
+
+      img
+        width: 100%
+        height: 100%
+        border-radius: 5rem
+
+  &__teamInfo
+    display: flex
+    text-align: center
+    align-items: center
+    justify-content: center
+    flex: 1
+    width: 100%
+    padding: 1rem 0
+
+    & > *:not(:last-child)
+      width: 30%
+
+      @include respond(phone)
+        width: 50%
+
+    & > *:nth-child(1),
+    & > *:nth-child(2)
+      position: relative
+
+      &::after
+        content: ''
+        position: absolute
+        top: 50%
+        right: 0
+        transform: translateY(-50%)
+        height: 5rem
+        width: .2rem
+        box-shadow: .1rem 0 .1rem rgba($color-gray, .8)
+
+    &--ranking
+      @include respond(phone)
+        display: none
+
+    &--trophy
+      display: flex
+      justify-content: center
+
+    &--finishes
+      & > *:not(:last-child)
+        margin-bottom: .5rem
+
+    &--fixture
+      & > *:not(:last-child)
+        margin-bottom: .5rem
+
+      .fixture
+        display: flex
+        justify-content: center
+
+        &__img
+          width: 2.5rem
+          height: 2.5rem
+          border-radius: 5rem
+          margin-right: 1rem
+          box-shadow: .2rem .2rem 1rem rgba(#000, .2)
+
+          &--img
+            width: 100%
+            height: 100%
+            border-radius: 5rem
+
+  &__trophy
+    width: 2rem
+    height: 2rem
+
+    &:not(:last-child)
+      margin-right: .5rem
+
+    &--logo
+      // fill: $color-blue-light
+      width: 100%
+      height: 100%
+
+  &__arrowIcon
+    transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    @include respond(tab-port)
+      display: none
+
+  &__rankingMobile
+    display: none
+
+    & > span:nth-child(2)
+      display: flex
+      align-items: center
+      justify-content: center
+      height: 4rem
+      width: 4rem
+      font-size: 2.5rem
+      margin-left: 1rem
+      border-radius: 5rem
+      background-color: #fff
+
+    @include respond(phone)
+      display: flex
+      align-items: center
+      margin-left: auto
+
+  &:hover
+    .AFG
+      box-shadow: 0 0 2rem rgba(darken($color-secondary, 5%), .8), 0 0 .5rem rgba(darken($color-secondary, 5%), 1)
+
+      @include respond(tab-port)
+        box-shadow: none
+
+    .AUS
+      box-shadow: 0 0 2rem rgba(darken($color-yellow, 5%), .8), 0 0 .5rem rgba(darken($color-yellow, 5%), 1)
+
+      @include respond(tab-port)
+        box-shadow: none
+
+    .BAN
+      box-shadow: 0 0 2rem rgba(darken($color-green, 30%), .8), 0 0 .5rem rgba(darken($color-green, 30%), 1)
+
+      @include respond(tab-port)
+        box-shadow: none
+
+    .ENG
+      box-shadow: 0 0 2rem rgba(darken($color-tertiary, 0%), .8), 0 0 .5rem rgba(darken($color-tertiary, 0%), 1)
+
+      @include respond(tab-port)
+        box-shadow: none
+
+    .IND
+      box-shadow: 0 0 2rem rgba(darken($color-orange, 5%), .8), 0 0 .5rem rgba(darken($color-orange, 5%), 1)
+
+      @include respond(tab-port)
+        box-shadow: none
+
+    .NZ
+      box-shadow: 0 0 2rem rgba(lighten($color-primary, 35%), .8), 0 0 .5rem rgba(lighten($color-primary, 35%), 1)
+
+      @include respond(tab-port)
+        box-shadow: none
+
+    .PAK
+      box-shadow: 0 0 2rem rgba(darken($color-green, 20%), .8), 0 0 .5rem rgba(darken($color-green, 20%), 1)
+
+      @include respond(tab-port)
+        box-shadow: none
+
+    .SA
+      box-shadow: 0 0 2rem rgba(darken($color-yellow, 10%), .8), 0 0 .5rem rgba(darken($color-yellow, 10%), 1)
+
+      @include respond(tab-port)
+        box-shadow: none
+
+    .SL
+      box-shadow: 0 0 2rem rgba(darken($color-blue-light, 20%), .8), 0 0 .5rem rgba(darken($color-blue-light, 20%), 1)
+
+      @include respond(tab-port)
+        box-shadow: none
+
+    .WI
+      box-shadow: 0 0 2rem rgba(darken($color-tertiary, 5%), .8), 0 0 .5rem rgba(darken($color-tertiary, 5%), 1)
+
+      @include respond(tab-port)
+        box-shadow: none

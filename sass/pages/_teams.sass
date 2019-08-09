@@ -1,0 +1,89 @@
+.teamsHeader
+  position: relative
+  padding: 22rem 0 8rem 0
+  background: 
+    image: url(../images/matches.jpg)
+    position: center
+    size: cover
+    repeat: no-repeat
+    attachment: fixed
+
+  @include respond(phone-land)
+    padding: 16rem 0 8rem 0
+
+  &::after
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: $teamsHeader-bg
+
+  &__heading-grp
+    position: relative
+    display: flex
+    flex-flow: column nowrap
+    align-items: center
+    z-index: 100
+
+.teams
+  .AFG
+    background-color: darken($color-secondary, 5%)
+
+    @include respond(tab-port)
+      background: linear-gradient(to right, darken($color-secondary, 5%), $color-primary)
+
+  .AUS
+    background-color: darken($color-yellow, 5%)
+
+    @include respond(tab-port)
+      background: linear-gradient(to right, darken($color-yellow, 5%), $color-primary)
+
+  .BAN
+    background-color: darken($color-green, 30%)
+
+    @include respond(tab-port)
+      background: linear-gradient(to right, darken($color-green, 30%), $color-primary)
+
+  .ENG
+    background-color: darken($color-tertiary, 0%)
+
+    @include respond(tab-port)
+      background: linear-gradient(to right, darken($color-tertiary, 0%), $color-primary)
+
+  .IND
+    background-color: darken($color-orange, 5%)
+
+    @include respond(tab-port)
+      background: linear-gradient(to right, darken($color-orange, 5%), $color-primary)
+
+  .NZ
+    background-color: lighten($color-primary, 35%)
+
+    @include respond(tab-port)
+      background: linear-gradient(to right, lighten($color-primary, 35%), $color-primary)
+
+  .PAK
+    background-color: darken($color-green, 20%)
+
+    @include respond(tab-port)
+      background: linear-gradient(to right, darken($color-green, 20%), $color-primary)
+
+  .SA
+    background-color: darken($color-yellow, 10%)
+
+    @include respond(tab-port)
+      background: linear-gradient(to right, darken($color-yellow, 10%), $color-primary)
+
+  .SL
+    background-color: darken($color-blue-light, 10%)
+
+    @include respond(tab-port)
+      background: linear-gradient(to right, darken($color-blue-light, 10%), $color-primary)
+
+  .WI
+    background-color: darken($color-tertiary, 5%)
+
+    @include respond(tab-port)
+      background: linear-gradient(to right, darken($color-tertiary, 5%), $color-primary)

@@ -1,0 +1,78 @@
+body
+  font:
+    family: cwc
+    size: 1.6rem
+
+.heading-big
+  font:
+    size: 5.2rem
+
+  @include respond(phone-land)
+    font-size: 4.5rem
+  
+  @include respond(phone)
+    font-size: 4rem
+
+.heading-primary
+  font:
+    size: 4rem
+
+.heading-secondary
+  font:
+    size: 3rem
+
+.heading-tertiary
+  font:
+    size: 2rem
+
+.small
+  font:
+    size: 1.2rem
+  // text-transform: uppercase
+
+  @include respond(tab-port)
+    font-size: 1.4rem
+
+  @include respond(phone)
+    font-size: 1.5rem
+
+.text-bold
+  font-weight: 600
+
+.text-bolder
+  font-weight: 800
+  text-transform: uppercase
+
+.text-align-left
+  text-align: left !important
+
+.pos-align-left
+  left: 1.6rem !important
+  transform: translateX(0) !important
+
+.text-light
+  color: #fff
+
+.text-red
+  color: $color-secondary
+
+.text-blue
+  color: $color-primary
+
+.text-green
+  color: $color-green
+
+.text-blue-light
+  color: $color-blue-light
+
+.text-yellow
+  color: $color-yellow
+
+.text-purple
+  color: $color-purple
+
+.text-gray
+  color: $color-gray
+
+.text-gray-dark
+  color: $color-gray-dark

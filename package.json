@@ -1,0 +1,18 @@
+{
+  "name": "iccwcupcm",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch": "node-sass sass/main.sass css/style.css -w"
+  },
+  "author": "Avijit Ghosh",
+  "license": "ISC",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  },
+  "devDependencies": {
+    "aos": "^2.3.4",
+    "node-sass": "^4.12.0"
+  }
+}

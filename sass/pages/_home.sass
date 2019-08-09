@@ -1,0 +1,825 @@
+.hero
+  position: relative
+
+  @include respond(tab-port)
+    background:
+      image: $hero-bg-light
+    padding-bottom: 4rem
+
+  @include respond(phone)
+    padding-bottom: 2rem
+
+  &__bg
+    width: 100%
+    position: absolute
+    top: 0
+    left: 0
+    height: 73rem
+    z-index: -1
+    overflow: hidden
+    background:
+      image: $hero-bg
+
+    @include respond(tab-port)
+      background:
+        image: none
+
+  &__row
+    padding-top: 13rem
+    display: flex
+    flex-wrap: wrap
+    align-items: flex-end
+
+    @include respond(phone-land)
+      padding-top: 8rem
+    
+    @include respond(phone)
+      padding-top: 10rem
+
+  &__wrapper
+    display: flex
+    flex-flow: row wrap
+
+    & > .col:first-child
+      @include respond(tab-port)
+        margin-bottom: 1.6rem
+
+  &__heading-grp
+    padding: 8rem 0
+    text-align: center
+
+    @include respond(tab-port)
+      padding: 6rem 0
+    
+    @include respond(phone-land)
+      text-align: left
+      padding: 4rem 0 5rem 0
+    
+    @include respond(phone)
+      display: none
+
+  &__accLink
+    transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    .fa
+      transform: translateY(-.1rem)
+      transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    &:hover
+      color: #fff 
+
+      .fa
+        color: #fff
+        transform: translate(.5rem, -.1rem)
+
+.upmatch
+  &__row
+    display: flex
+  
+  &__heading-grp
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+
+    @include respond(phone-sm)
+      flex-flow: column nowrap
+      text-align: center
+    
+    & > h1
+      @include respond(phone-sm)
+        margin-bottom: 2rem
+
+  &__slideCont
+    padding: 0 1rem
+
+  &__prev
+    top: 110%
+    background-color: $color-secondary
+
+    .fa
+      transform: translateX(-.21rem)
+
+    &:hover
+      box-shadow: 0 0 .5rem .1rem rgba($color-secondary, .8)
+
+  &__next
+    top: 110%
+    background-color: $color-secondary
+
+    .fa
+      transform: translateX(.21rem)
+
+    &:hover
+      box-shadow: 0 0 .5rem .1rem rgba($color-secondary, .8)
+
+  .slick-dots
+    & > li > button
+      transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+      &:hover
+        background-color: $color-secondary
+        // box-shadow: 0 0 .5rem .1rem rgba($color-secondary, .5)
+
+    & > .slick-active > button
+      background-color: $color-secondary
+      box-shadow: 0 0 .5rem .1rem rgba($color-secondary, .5)
+
+.insider
+  &__row
+    display: flex
+
+  &__heading-grp
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+
+    @include respond(phone-sm)
+      flex-flow: column nowrap
+      text-align: center
+    
+    & > h1
+      @include respond(phone-sm)
+        margin-bottom: 2rem
+
+  &__prev
+    top: 105%
+    background-color: $color-secondary
+
+    .fa
+      transform: translateX(-.21rem)
+
+    &:hover
+      box-shadow: 0 0 .5rem .1rem rgba($color-secondary, .8)
+
+  &__next
+    top: 105%
+    background-color: $color-secondary
+
+    .fa
+      transform: translateX(.21rem)
+
+    &:hover
+      box-shadow: 0 0 .5rem .1rem rgba($color-secondary, .8)
+
+  .slick-dots
+    & > li > button
+      transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+      &:hover
+        background-color: $color-secondary
+        // box-shadow: 0 0 .5rem .1rem rgba($color-secondary, .5)
+
+    & > .slick-active > button
+      background-color: $color-secondary
+      box-shadow: 0 0 .5rem .1rem rgba($color-secondary, .5)
+
+.matchHL
+  &__row
+    display: flex
+
+  &__heading-grp
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+
+    @include respond(phone-sm)
+      flex-flow: column nowrap
+      text-align: center
+    
+    & > h1
+      @include respond(phone-sm)
+        margin-bottom: 2rem
+
+  &__prev
+    top: 105%
+    background-color: $color-secondary
+
+    .fa
+      transform: translateX(-.21rem)
+
+    &:hover
+      box-shadow: 0 0 .5rem .1rem rgba($color-secondary, .8)
+
+  &__next
+    top: 105%
+    background-color: $color-secondary
+
+    .fa
+      transform: translateX(.21rem)
+
+    &:hover
+      box-shadow: 0 0 .5rem .1rem rgba($color-secondary, .8)
+
+  .slick-dots
+    & > li > button
+      transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+      &:hover
+        background-color: $color-secondary
+        // box-shadow: 0 0 .5rem .1rem rgba($color-secondary, .5)
+
+    & > .slick-active > button
+      background-color: $color-secondary
+      box-shadow: 0 0 .5rem .1rem rgba($color-secondary, .5)
+
+.lvs
+  &__row
+    display: flex
+  
+  &__heading-grp
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+
+    @include respond(phone-sm)
+      flex-flow: column nowrap
+      text-align: center
+    
+    & > h1
+      @include respond(phone-sm)
+        margin-bottom: 2rem
+
+  &__prev
+    top: 105%
+    background-color: $color-secondary
+
+    .fa
+      transform: translateX(-.21rem)
+
+    &:hover
+      box-shadow: 0 0 .5rem .1rem rgba($color-secondary, .8)
+
+  &__next
+    top: 105%
+    background-color: $color-secondary
+
+    .fa
+      transform: translateX(.21rem)
+
+    &:hover
+      box-shadow: 0 0 .5rem .1rem rgba($color-secondary, .8)
+
+  .slick-dots
+    & > li > button
+      transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+      &:hover
+        background-color: $color-secondary
+        // box-shadow: 0 0 .5rem .1rem rgba($color-secondary, .5)
+
+    & > .slick-active > button
+      background-color: $color-secondary
+      box-shadow: 0 0 .5rem .1rem rgba($color-secondary, .5)
+
+.lnews
+  background-color: lighten($color-gray, 20%)
+  padding: 7rem 0
+
+  @include respond(phone-land)
+    padding: 6rem 0
+
+  &__row
+    display: flex
+  
+  &__heading-grp
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+
+    @include respond(phone-sm)
+      flex-flow: column nowrap
+      text-align: center
+    
+    & > h1
+      @include respond(phone-sm)
+        margin-bottom: 2rem
+  
+  &__wrapper
+    display: flex
+    flex-flow: row wrap
+
+    .col:nth-child(1)
+      margin-bottom: 1.7rem
+
+    & > .col-33
+      .figType2
+        @include respond(tab-port)
+          height: 36rem
+        
+        @include respond(phone-xsm)
+          height: 40rem
+
+      &:nth-child(2),
+      &:nth-child(3)
+        .figType2
+          @include respond(tab-port)
+            margin-bottom: 2.1rem
+
+    & > .col-33:not(:last-child)
+      .figType2    
+        @include respond(phone-sm)
+          margin-bottom: 2.1rem
+
+  &__height
+    height: 45rem
+
+    @include respond(tab-land)
+      height: 40rem
+
+    @include respond(tab-port)
+      height: 36rem
+
+.tstats
+  background-color: darken($color-primary, 10%)
+  padding: 7rem 0
+
+  @include respond(phone-land)
+    padding: 6rem 0
+
+  &__row
+    display: flex
+
+  &__heading-grp
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+
+    @include respond(phone-sm)
+      flex-flow: column nowrap
+      text-align: center
+    
+    & > h1
+      @include respond(phone-sm)
+        margin-bottom: 2rem
+  
+  &__wrapper
+    display: flex
+    flex-flow: row wrap
+
+    .col-33
+      margin-bottom: 2rem
+
+      @include respond(tab-port)
+        width: 100%
+    
+    .col-25
+      @include respond(phone-sm)
+        width: 100%
+      
+      &:nth-child(9)
+        @include respond(phone-sm)
+          margin-bottom: 2rem
+
+    .col:nth-child(7),
+    .col:nth-child(8)
+      @include respond(tab-port)
+        margin-bottom: 2rem
+
+  &__matches
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 1rem 0
+    flex-wrap: wrap
+    background-color: #fff
+  
+  &__matchCounter
+    margin: 0 1rem 0 0
+    &--num
+      font-size: 8rem
+  
+  &__counterText
+    font-size: 3rem
+  
+  &__statSnippet
+    background-color: #fff
+    padding: 1.6rem
+    min-height: 25rem
+    height: 100%
+    position: relative
+
+    .snippetCont
+      display: flex
+      flex-flow: column wrap
+      align-items: center
+      text-align: center
+      justify-content: space-between
+      height: 100%
+
+      & > h2
+        @include respond(phone-sm)
+          font-size: 2.5rem
+
+        br
+          @include respond(phone-sm)
+            display: none
+
+    &--data
+      & > h1
+        @include respond(phone-sm)
+          font-size: 6rem
+
+    &--nation
+      display: flex
+      align-items: center
+      justify-content: center
+      flex-wrap: nowrap
+      // position: absolute
+      // bottom: 2rem
+
+      .nationCont
+        display: flex
+        flex-flow: row wrap
+        align-items: center
+        justify-content: center
+
+      .flag
+        width: 4rem
+        height: 4rem
+        box-shadow: .5rem .6rem 1rem rgba($color-gray, 1)
+        border-radius: 50%
+
+        img
+          width: 100%
+          height: 100%
+          border-radius: 50%
+
+.allTime
+  padding: 7rem 0
+
+  @include respond(phone-land)
+    padding: 6rem 0
+
+  &__row
+    display: flex
+
+  &__heading-grp
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+
+    @include respond(phone-sm)
+      flex-flow: column nowrap
+      text-align: center
+    
+    & > h1
+      @include respond(phone-sm)
+        margin-bottom: 2rem
+
+  &__heading-grp
+    display: flex
+    justify-content: space-between
+  
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+
+    .col-50:not(:last-child)
+      @include respond(tab-port)
+        margin-bottom: 2rem
+
+.venue
+  background-color: #21D4FD
+  background-image: $venue-bg
+  padding: 7rem 0 11.4rem 0
+
+  @include respond(phone-land)
+    padding: 6rem 0 10.4rem 0
+
+  &__row
+    display: flex
+
+  &__heading-grp
+    display: flex
+    flex-flow: row wrap
+    justify-content: space-between
+
+    @include respond(phone-sm)
+      flex-flow: column nowrap
+      text-align: center
+
+    & > .heading
+      @include respond(phone-sm)
+        margin-bottom: 2rem
+
+      span:nth-child(3)
+        @include respond(phone-sm)
+          display: block
+
+  &__prev
+    top: 105%
+    background-color: $color-primary
+
+    .fa
+      transform: translateX(-.21rem)
+
+    &:hover
+      box-shadow: 0 0 .5rem .1rem rgba($color-primary, .8)
+
+  &__next
+    top: 105%
+    background-color: $color-primary
+
+    .fa
+      transform: translateX(.21rem)
+
+    &:hover
+      box-shadow: 0 0 .5rem .1rem rgba($color-primary, .8)
+
+  .slick-dots
+    & > li > button
+      transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+      &:hover
+        background-color: $color-primary
+        // box-shadow: 0 0 .5rem .1rem rgba($color-primary, .5)
+
+    & > .slick-active > button
+      background-color: $color-primary
+      box-shadow: 0 0 .5rem .1rem rgba($color-primary, .5)
+
+.qteams
+  padding: 7rem 0
+
+  @include respond(phone-land)
+    padding: 6rem 0
+
+  &__row
+    display: flex
+
+  &__heading-grp
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+  &__nationCont
+    width: calc(100% / 5)
+    padding: 1rem
+
+    @include respond(tab-port)
+      width: calc(100% / 4)
+
+    @include respond(phone-land)
+      width: calc(100% / 3)
+
+    @include respond(phone-sm)
+      width: calc(100% / 2)
+
+  &__nation
+    width: 100%
+    display: flex
+    flex-flow: column nowrap
+    align-items: center
+    padding: 2rem 1rem
+    border-radius: 1rem
+    box-shadow: 0 .2rem .5rem rgba($color-gray, .5)
+    transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)    
+
+    &--flag
+      width: 6rem
+      height: 6rem
+      border-radius: 50%
+      box-shadow: 0rem .2rem 1rem rgba($color-gray, .8)
+      
+      .flag
+        width: 100%
+        height: 100%
+        border-radius: 50%
+
+    &--info
+      text-align: center
+    
+    &:hover
+      box-shadow: 0 1rem 2.5rem rgba($color-gray, .5)
+
+.quicklink
+  &__row
+    display: flex
+    justify-content: center
+  
+  &__logo
+    width: 55rem
+    // height: 10rem
+
+    @include respond(phone)
+      width: 40rem
+
+    &--logo
+      width: 100%
+      height: 100%
+      fill: $color-primary
+  
+  &__wrapper
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+  
+  &__linkCont
+    width: calc(100% / 3)
+    height: 25rem
+    padding: 1rem
+
+    @include respond(tab-port)
+      width: calc(100% / 2)
+    
+    @include respond(phone-sm)
+      width: 100%
+  
+  &__quickbtn
+    width: 100%
+    height: 100%
+    position: relative
+    // overflow: hidden
+    display: flex
+    flex-flow: column wrap
+    align-items: center
+
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      background-image: linear-gradient(to top, rgba(#000, .5), transparent)
+
+    &--text
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      text-align: center
+      z-index: 100
+    
+    &--logo
+      width: 3rem
+      position: absolute
+      bottom: 1.2rem
+      z-index: 100
+
+      .logo
+        fill: rgba(#fff, .5)
+    
+    &--bg
+      position: relative
+      width: 100%
+      height: 100%
+      overflow: hidden
+
+      &::before
+        content: ''
+        position: absolute
+        top: -17rem
+        left: -19rem
+        transform: scale(1)
+        width: 40rem
+        height: 40rem
+        border-radius: 50%
+        box-shadow: 0 0 1.2rem rgba(#000, .5)
+        transition: transform .6s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+        @include respond(tab-land)
+          top: -17rem
+          left: -22rem
+
+        @include respond(tab-port)
+          top: -16rem
+          left: -19rem 
+
+        @include respond(phone-land)
+          top: -21rem
+          left: -20rem
+          width: 45rem
+          height: 45rem
+
+        @include respond(phone)
+          top: -21rem
+          left: -24rem
+
+        @include respond(phone-sm)
+          display: none
+
+      &::after
+        content: ''
+        position: absolute
+        top: -20rem
+        right: -16rem
+        transform: scale(1)
+        width: 40rem
+        height: 40rem
+        border-radius: 50%
+        box-shadow: 0 0 1.2rem rgba(#000, .5)
+        transition: transform .6s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+        @include respond(tab-land)
+          top: -20rem
+          right: -20rem
+
+        @include respond(tab-port)
+          top: -21rem
+          right: -17rem
+
+        @include respond(phone-land)
+          top: -26rem
+          right: -17rem
+          width: 45rem
+          height: 45rem
+
+        @include respond(phone)
+          top: -29rem
+          right: -18rem
+
+        @include respond(phone-sm)
+          display: none
+
+    .bg-red
+      background-color: $color-secondary
+
+      &::before,
+      &::after
+        background-color: $color-secondary
+    
+    .bg-blue-light
+      background-color: $color-blue-light
+
+      &::before,
+      &::after
+        background-color: $color-blue-light
+    
+    .bg-purple
+      background-color: $color-purple
+
+      &::before,
+      &::after
+        background-color: $color-purple
+    
+    .bg-yellow
+      background-color: $color-yellow
+
+      &::before,
+      &::after
+        background-color: $color-yellow
+    
+    .bg-green
+      background-color: $color-green
+
+      &::before,
+      &::after
+        background-color: $color-green
+    
+    .bg-orange
+      background-color: $color-orange
+
+      &::before,
+      &::after
+        background-color: $color-orange
+  
+    &:hover
+      .quicklink__quickbtn--bg
+        &::before
+          transform: scale(1.3)
+
+        &::after
+          transform: scale(1.5)
+
+.sponsors
+  &__row
+    display: flex
+    flex-flow: row wrap
+    justify-content: center
+    text-align: center
+  
+  &__img
+    margin: 0 1rem 2rem 1rem
+    width: 12rem
+    height: 4rem
+    border-radius: 5rem
+
+    &--img
+      width: 100%
+      height: 100%
+  
+  &__row:last-child
+    .sponsors__img
+      margin: 0 1rem 2rem 1rem
+      width: 10rem
+      height: 3.5rem
+      border-radius: 5rem
+
+    .sponsors__img--img
+      width: 100%
+      height: 100%
+
+// section:not(:first-child)
+//   @include respond(phone)
+//     margin: 0
+//     padding: 6rem 0
+
+//   &:nth-child(5)
+//     @include respond(phone)
+//       padding-bottom: 10rem

@@ -1,0 +1,428 @@
+.figLink
+  display: inline-block
+  width: 100%
+  z-index: 800
+
+  &:hover
+    .figType5
+      &__cap
+        & > *
+          color: $color-tertiary
+
+  &:focus
+    outline: none
+
+.fig
+  position: relative
+
+.figType1
+  width: 100%
+  overflow: hidden
+  box-shadow: 0 0 2rem rgba(#000, .3)
+  min-height: 40rem
+
+  @include respond(phone-land)
+    min-height: 50rem
+
+  @include respond(phone)
+    min-height: 35rem
+  
+  &__Img
+    width: 100%
+    height: 40rem
+    transition: all 1s cubic-bezier(0.39, 0.575, 0.565, 1)
+    transform-origin: center
+
+    @include respond(phone-land)
+      height: 50rem
+    
+    @include respond(phone)
+      height: 35rem
+
+  &__playBtn
+    width: 12rem
+    height: 12rem
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    top: 40%
+    left: 50%
+    transform: translate(-50%, -40%)
+    border-radius: 50%
+    padding-left: 1.5rem;
+    background-color: rgba($color-tertiary, .9)
+    color: #fff
+    z-index: 100
+    cursor: pointer
+    transition: all 1s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    @include respond(phone-land)
+      top: 50%
+      transform: translate(-50%, -50%)
+    
+    @include respond(phone)
+      width: 8rem
+      height: 8rem
+      padding-left: 1rem;
+      top: 40%
+      left: 50%
+      background-color: rgba($color-tertiary, 1)
+      box-shadow: 0 0 1rem rgba($color-tertiary, 1)
+      transform: translate(-50%, -40%)
+
+    & > i
+      transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+      font-size: 6rem
+
+      @include respond(phone)
+        font-size: 4rem
+
+    &:focus
+      outline: none
+
+      
+  &__cap
+    width: 100%
+    position: absolute
+    bottom: 0
+    padding: 20rem 2rem 3rem 2rem
+    background-image: linear-gradient(to top, $color-primary 15%, transparent)
+    z-index: 10
+
+    &::after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 50%
+      transform: translateX(-50%)
+      width: 90%
+      height: 1rem
+      background:
+        image: linear-gradient(to left, transparent 0%, $color-primary 40%, $color-secondary)
+      transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+  &:hover
+    .figType1__playBtn
+      background-color: rgba($color-tertiary, 1)
+      box-shadow: 0 0 1rem .2rem rgba($color-tertiary, 1)
+      transform: translate(-50%, -40%) rotate(120deg)
+
+      @include respond(phone-land)
+        transform: translate(-50%, -50%) rotate(120deg)
+      
+      @include respond(phone)
+        transform: translate(-50%, -40%)
+        box-shadow: 0 0 1rem rgba($color-tertiary, 1)
+
+    .figType1__Img
+      transform: scale(1.2)
+
+    .figType1__cap
+      &::after
+        width: 100%
+
+.figType2
+  display: flex
+  flex-direction: column
+  background-color: #fff
+  height: 36rem
+  box-shadow: 0 0 .2rem rgba($color-gray, 1)
+  transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+  @include respond(phone-land)
+    height: 38rem
+
+  @include respond(phone)
+    height: 34rem
+
+  @include respond(phone-sm)
+    height: 50rem
+
+  @include respond(phone-xsm)
+    height: 45rem
+
+  &__img
+    width: 100%
+    position: relative
+    overflow: hidden
+
+    &--img
+      width: 100%
+      transform: scale(1.05)
+      transition: all .6s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+  &__overlay
+    position: absolute
+    top: 0
+    width: 100%
+    height: 100%
+    background-color: rgba(#000, 0)
+    transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+  &__playBtn
+    position: absolute
+    bottom: 2rem
+    left: 50%
+    transform: translate(-50%, 5rem)
+    background-color: $color-secondary
+    border-radius: 3rem
+    padding: .2rem 1rem
+    transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    @include respond(phone)
+      transform: translate(-50%, 0)
+      padding: .5rem 1.2rem
+
+    .fa
+      font-size: 1.5rem
+  
+  &__cap
+    text-align: center
+    padding: 2rem 1.6rem
+    margin-top: -0.4rem;
+
+    .date
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+  
+  &:hover
+    box-shadow: 0 0 1.5rem rgba($color-gray, .6)
+
+    .figType2__overlay
+      background-color: rgba(#000, .2)
+    
+    .figType2__img
+      &--img
+        transform: scale(1.2)
+    
+    .figType2__playBtn
+      transform: translate(-50%, 0)
+
+.figType3
+  width: 100%
+  height: 45rem
+  overflow: hidden
+
+  @include respond(big-desk)
+    height: 40rem
+
+  @include respond(tab-land)
+    height: 40rem
+
+  @include respond(tab-port)
+    height: 100%
+
+  @include respond(phone-sm)
+    height: 40rem
+
+  &__img
+    width: 100%
+    height: 45rem
+
+    @include respond(big-desk)
+      height: 40rem
+
+    @include respond(tab-land)
+      height: 40rem
+
+    @include respond(tab-port)
+      height: 100%
+
+    @include respond(phone-sm)
+      height: 40rem
+
+    &--img
+      width: 100%
+      height: 100%
+      transform: scale(1.02)
+      transition: all 1s cubic-bezier(0.39, 0.575, 0.565, 1)
+  
+  &__cap
+    width: 100%
+    position: absolute
+    bottom: 0
+    left: 0
+    padding: 4rem 1.6rem 1.5rem
+    background-image: linear-gradient(to bottom, transparent, rgba($color-primary, .6) 40%, rgba($color-primary, 1) 100%)
+    transform: translateY(7rem)
+    transition: all .6s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+    @include respond(tab-land)
+      transform: translateY(9rem)
+
+    @include respond(tab-port)
+      transform: translateY(0)
+      padding: 2rem 2rem 1.6rem 2rem 
+
+    &--para
+      line-height: 1.5
+      visibility: hidden
+      opacity: 0
+      transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+      @include respond(tab-port)
+        visibility: visible
+        opacity: 1
+    
+  &:hover
+
+    .figType3__img--img
+      transform: scale(1.15)
+    
+    .figType3__cap
+      transform: translateY(0)
+      
+      &--para
+        visibility: visible
+        opacity: 1
+
+.figType4
+  display: flex
+  flex-flow: column nowrap
+  box-shadow: 0 0 .5rem rgba(#000, .2)
+  // border: .1rem solid rgba($color-gray, .8)
+  background-color: #fff
+  transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+  height: 42rem
+
+  @include respond(phone)
+    height: 41rem
+  
+  @include respond(phone-sm)
+    height: 54.5rem
+
+  &__img
+    width: 100%
+    position: relative
+    overflow: hidden
+
+    &--img
+      width: 100%
+      transform: scale(1.05)
+      transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+    
+    &--loc
+      position: absolute
+      display: flex
+      align-items: center
+      top: 1.2rem
+      left: 1.2rem
+      padding: .6rem 1rem
+      background-color: $color-primary
+      border-radius: 5rem
+      visibility: hidden
+      opacity: 0
+      transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+      @include respond(phone-land)
+        padding: 1.2rem 1.8rem
+
+      @include respond(phone)
+        visibility: visible
+        opacity: 1
+
+      .loc
+        padding-left: .3rem
+  
+  &__cap
+    padding: 1.2rem
+
+    &--para
+      color: rgba(#222, .8)
+      line-height: 1.5
+  
+  &__badge
+    position: absolute
+    bottom: 0
+    width: 100%
+    text-align: center
+
+    @include respond(phone-sm)
+      font-size: 1.6rem
+      padding: 1.6rem 0
+  
+  .final
+    background-image: $final-gradient
+
+  .semi-final
+    background-image: $semi-final-gradient
+
+  &:hover
+    box-shadow: 0 0 2rem rgba(#000, .2)
+    // border: .1rem solid rgba($color-primary, 1)
+
+    .figType4__img--img
+      transform: scale(1.2)
+
+    .figType4__img--loc
+      visibility: visible
+      opacity: 1
+
+.figType5
+  display: flex
+  width: 100%
+
+  @include respond(tab-port)
+    flex-flow: row wrap
+    margin-top: 0
+
+  @include respond(phone)
+    padding: 1rem
+    border-top-right-radius: 1rem
+    border-top-left-radius: .3rem
+    border-bottom-left-radius: 1rem
+    border-bottom-right-radius: .3rem
+    box-shadow: 0 0 1rem rgba($color-gray, .6)
+    // background-color: lighten($color-gray, 16%)
+
+  @include respond(phone)
+    flex-flow: row nowrap
+
+  &__img
+    position: relative
+    width: 11rem
+    height: 6.5rem
+    flex: none
+    margin-right: 1rem
+    border-top-right-radius: 1rem
+    border-top-left-radius: .3rem
+    border-bottom-left-radius: 1rem
+    border-bottom-right-radius: .3rem
+
+    @include respond(tab-port)
+      margin-right: 0
+      margin-bottom: 1rem
+
+    @include respond(phone)
+      width: 15rem
+      height: 9rem
+      margin-right: 1rem
+      margin-bottom: 0
+
+    &--img
+      width: 100%
+      height: 100%
+      border-top-right-radius: 1rem
+      border-top-left-radius: .3rem
+      border-bottom-left-radius: 1rem
+      border-bottom-right-radius: .3rem
+
+    &--duration
+      position: absolute
+      bottom: .5rem
+      left: 50%
+      transform: translateX(-50%)
+      padding: .4rem 1rem
+      border-radius: 5rem
+      background-color: $color-secondary
+
+      @include respond(phone)
+        padding: .4rem 1.2rem
+
+  &__cap
+    h4
+      @include respond(phone)
+        font-size: 2rem

@@ -1,0 +1,39 @@
+.btn
+  border-radius: 4rem
+  padding: 1rem 3rem
+  color: #fff
+  text-align: center
+  transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+  span:last-child
+    transition: all .3s cubic-bezier(0.39, 0.575, 0.565, 1)
+
+  &:hover
+    span:last-child
+      color: #fff
+
+.btn-primary  
+  background-color: $color-primary
+
+  &:hover
+    background-color: $color-secondary
+    box-shadow: 0 0 .5rem .1rem rgba($color-secondary, .5)
+
+.btn-stats
+  background-color: #fff
+  color: $color-primary
+
+  &:hover
+    background-color: $color-green
+    box-shadow: 0 0 .5rem .1rem rgba($color-green, .5)
+
+    &:hover
+      span:last-child
+        color: $color-primary
+
+.btn-venue
+  background-color: $color-primary
+
+  &:hover
+    background-color: $color-blue-light
+    box-shadow: 0 0 .5rem .1rem rgba(darken($color-blue-light, 20%), .5)
